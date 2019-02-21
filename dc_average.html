@@ -21,7 +21,7 @@
 </head>
 <body>
     <h1>Data Visualization</h1>
-    <h2>Pie Chart</h2>
+    <h2>Scatter Plot</h2>
     <div>
         <h3>Transaction Size</h3>
         <div id="pie-chart"></div>
@@ -36,22 +36,7 @@
     function makeGraphs(error, transactionsData) {
         var ndx = crossfilter(transactionsData);
         
-        var size_dimension = ndx.dimension(function (d) {
-            if (d.spend > 200) 
-                return "Big";
-            else
-                return "Small";
-        });
         
-        var size_group = size_dimension.group();
-        
-        dc.pieChart("#pie-chart")
-            .height(330)
-            .radius(90)
-            .dimension(size_dimension)
-            .group(size_group);
-            
-        dc.renderAll();
         
        
     }
