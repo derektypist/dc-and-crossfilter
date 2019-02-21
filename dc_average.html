@@ -36,14 +36,54 @@
         var ndx = crossfilter(transactionsData);
         
         var name_dim = ndx.dimension(dc.pluck('name'));
-        var total_spend_by_person = name_dim.group().reduceSum(dc.pluck('spend'));
-        var total_chart = dc.barChart("#bar-chart");
         
-        total_chart
+        // var average_spend_by_person = name_dim.group().reduce(adder, remover, initialiser);
+        
+        var average_spend_by_person = name_dim.group().reduce(
+            
+            // Add a fact
+            function (p, v) {
+                p.count++;
+                p.total+=v.spend;
+                p.average = p.total / p.count;
+                return p;
+            },
+            
+            // Remove a fact
+            function (p, v) {
+                p.count--;
+                if (p.count == 0) {
+                    p.total = 0;
+                    p.average = 0;
+                } else {
+                    p.total-=v.spend;
+                    p.average = p.total / p.count;
+                }
+                return p;
+            },
+            
+            // Initialise the Reducer
+            
+            function () {
+                return {count: 0, total: 0, average: 0};
+            }
+            
+            
+            
+            
+            
+            
+            );
+        var average_chart = dc.barChart("#bar-chart");
+        
+        average_chart
             .width(500)
             .height(300)
             .dimension(name_dim)
-            .group(total_spend_by_person)
+            .group(average_spend_by_person)
+            .valueAccessor(function (d) {
+                return d.value.average;
+            })
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal);
             
