@@ -1,18 +1,28 @@
+Welcome to DCJS and CrossfilterJS
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## Types of Charts
 
+Barcharts, Line Graphs, Pie Charts, Scatter Plot and Stacked Chart
 
-Hi there! Welcome to Cloud9 IDE!
+## Contents
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
+composite_charts.html
+dc_barchart.html
+dc_average.html
+derived_data.html
+line_graph.html
+pie_charts.html
+scatter-plot.html
+stacked_chart.html
+try_queue.html
 
-Happy coding!
-The Cloud9 IDE team
+JSON file for transactions
+
+## Objectives
+
+To show the different types of charts (e.g. line graphs, scatter plot) that are available
+for data visualisation.
+
+## Technologies
+
+Uses JavaScript to access D3, DC, Crossfilter and Queue.
