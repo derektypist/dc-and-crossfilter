@@ -1,4 +1,6 @@
-Welcome to DCJS and CrossfilterJS
+# DCJS and CrossfilterJS
+
+Welcome to DCJS and CrossfilterJS.
 
 ## Types of Charts
 
@@ -6,15 +8,15 @@ Barcharts, Line Graphs, Pie Charts, Scatter Plot and Stacked Chart
 
 ## Contents
 
-composite_charts.html
-dc_barchart.html
-dc_average.html
-derived_data.html
-line_graph.html
-pie_charts.html
-scatter-plot.html
-stacked_chart.html
-try_queue.html
+* composite_charts.html
+* dc_barchart.html
+* dc_average.html
+* derived_data.html
+* line_graph.html
+* pie_charts.html
+* scatter-plot.html
+* stacked_chart.html
+* try_queue.html
 
 JSON file for transactions
 
@@ -26,3 +28,7 @@ for data visualisation.
 ## Technologies
 
 Uses JavaScript to access D3, DC, Crossfilter and Queue.
+
+## Testing
+
+All links are manually tested to ensure that they are pointing to the correct destination.
